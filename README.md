@@ -1,6 +1,8 @@
 # Country explorer
 Country explorer using "Rest Countries" api
 
+The project utilizes the [Rest Countries API](https://restcountries.com/) to fetch country data.
+
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
