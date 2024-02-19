@@ -9,4 +9,5 @@ public class CountryDto
     public required string Region { get; set; }
     public required string Flag { get; set; }
     public required string GoogleMaps { get; set; }
+    public required string Alt { get; set; }
 }

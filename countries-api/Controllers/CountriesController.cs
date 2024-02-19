@@ -35,7 +35,8 @@ namespace countries_api.Controllers
             Languages = jToken?["languages"]?.Values().Select(x => x.ToString() ?? string.Empty).ToArray() ?? Array.Empty<string>(),
             Region = jToken?["region"]?.ToString() ?? string.Empty,
             Flag = jToken?["flags"]?["png"]?.ToString() ?? string.Empty,
-            GoogleMaps = jToken?["maps"]?["googleMaps"]?.ToString() ?? string.Empty
+            GoogleMaps = jToken?["maps"]?["googleMaps"]?.ToString() ?? string.Empty,
+            Alt = jToken?["flags"]?["alt"]?.ToString() ?? string.Empty,
         };
     }
 }

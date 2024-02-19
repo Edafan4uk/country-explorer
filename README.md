@@ -8,7 +8,7 @@ The project utilizes the [Rest Countries API](https://restcountries.com/) to fet
 Before you begin, ensure you have met the following requirements:
 
 - Node.js installed on your machine. You can download it from [nodejs.org](https://nodejs.org/).
-- .NET SDK installed on your machine. You can download it from [dotnet.microsoft.com](https://dotnet.microsoft.com/download).
+- [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) installed on your machine.
 - Visual Studio Code or any other preferred code editor.
 - (Optional) Visual Studio IDE for easier development experience.
 
