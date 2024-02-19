@@ -17,7 +17,7 @@ function CountryOverview() {
       .catch(error => {
         console.error(error);
       });
-  }, []);
+  }, [countryName]);
   return (
     <Container>
       <div className="countries-button">
@@ -29,6 +29,7 @@ function CountryOverview() {
       <div id="country">
         <div>
           <img
+            alt={country?.alt}
             key={country?.flag}
             src={country?.flag}
           />
@@ -46,6 +47,7 @@ function CountryOverview() {
             <p>
               <a
                 target="_blank"
+                rel="noreferrer"
                 href={country.googleMaps}
               >
                 View on Google Maps

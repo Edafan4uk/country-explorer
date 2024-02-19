@@ -6,4 +6,5 @@ export interface Country {
     region: string;
     flag: string;
     googleMaps: string;
+    alt: string;
 }
