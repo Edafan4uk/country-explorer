@@ -1,4 +1,5 @@
 using countries_api;
+using countries_api.Settings;
 using Polly;
 
 // CORS policy
@@ -7,6 +8,9 @@ var allowSpecificOrigins = "_myAllowSpecificOrigins";
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.Configure<RestCountriesOptions>(
+    builder.Configuration.GetSection(RestCountriesOptions.RestCountries));
 
 builder.Services.AddCors(options =>
 {
