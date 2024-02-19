@@ -24,10 +24,10 @@ Before you begin, ensure you have met the following requirements:
     git checkout master
     ```
 
-3. Navigate to the `client` directory:
+3. Navigate to the `countries-ui` directory (Client app):
 
     ```bash
-    cd country-explorer/client
+    cd country-explorer/countries-ui
     ```
 
 4. Install frontend dependencies:
@@ -42,10 +42,10 @@ Before you begin, ensure you have met the following requirements:
     cd ..
     ```
 
-6. Navigate to the `server` directory:
+6. Navigate to the `countries-api` directory (ASP.NET Core app):
 
     ```bash
-    cd server
+    cd countries-api
     ```
 
 7. Restore backend dependencies:
@@ -75,7 +75,7 @@ Now that you've set up the project, you can run both the frontend and backend pa
 2. In a separate terminal, start the React development server:
 
     ```bash
-    cd client
+    cd countries-ui
     npm start
     ```
 
@@ -91,7 +91,7 @@ You can explore the API endpoints using Swagger UI. Open your web browser and na
 
 ## Additional Notes
 
-- You can customize the configuration settings in the `appsettings.json` file located in the `server` directory to suit your needs.
+- You can customize the configuration settings in the `appsettings.json` file located in the `countries-api` directory to suit your needs.
 - Make sure to update the API endpoint in the React app if you change the backend server's URL or port.
 
 ## Contributing
