@@ -7,6 +7,42 @@ The project utilizes the [Rest Countries API](https://restcountries.com/) to fet
 
 Before you begin, ensure you have met the following requirements:
 
+- Docker installed on your machine. You can download it from [docker.com](https://www.docker.com/).
+
+## Running with Docker Compose
+
+To run the application using Docker Compose, follow these steps:
+
+1. Clone the repository to your local machine:
+
+    ```bash
+    git clone https://github.com/Edafan4uk/country-explorer.git
+    ```
+
+2. Navigate to the project directory:
+
+    ```bash
+    cd country-explorer
+    ```
+
+3. Build and start the application containers with Docker Compose:
+
+    ```bash
+    docker compose up -d
+    ```
+
+   This command will build the necessary Docker images and start containers for both the frontend and backend parts of the application in detached mode.
+
+4. Once the containers are up and running, you can access the application in your web browser at `http://localhost:3000`.
+
+## Setup Instructions
+
+If you prefer to run the application without Docker Compose, follow the setup instructions below.
+
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
 - Node.js installed on your machine. You can download it from [nodejs.org](https://nodejs.org/).
 - [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) installed on your machine.
 - Visual Studio Code or any other preferred code editor.
