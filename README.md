@@ -7,7 +7,7 @@ The project utilizes the [Rest Countries API](https://restcountries.com/) to fet
 
 Before you begin, ensure you have met the following requirements:
 
-- Docker installed on your machine. You can download it from [docker.com](https://www.docker.com/).
+- Docker installed on your machine. You can download it from [docker.com](https://docs.docker.com/get-docker/).
 
 ## Running with Docker Compose
 
