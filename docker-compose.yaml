@@ -1,0 +1,17 @@
+services:
+  countries-api:
+    build:
+      context: countries-api
+    container_name:  countries-api
+    restart: always
+    ports:
+      - 8080:8080
+
+  countries-ui:
+    build:
+      context: countries-ui
+    container_name: countries-ui
+    ports:
+      - 3000:80
+    depends_on:
+      - backend

@@ -10,7 +10,8 @@ function CountryOverview() {
   const { countryName } = useParams();
   const [country, setCountry] = useState<Country>();
   useEffect(() => {
-    axios.get<Country>(`https://localhost:7265/api/countries/${countryName}`)
+    const url = process.env.REACT_APP_API_URL + `api/countries/${countryName}`;
+    axios.get<Country>(url)
       .then(response => {
         setCountry(response.data);
       })

@@ -9,7 +9,8 @@ function Countries() {
   const [countries, setCountries] = useState<Country[]>([]);
 
   useEffect(() => {
-    axios.get<Country[]>('https://localhost:7265/api/countries')
+    const url = process.env.REACT_APP_API_URL + "api/countries";
+    axios.get<Country[]>(url)
       .then(response => {
         setCountries(response.data);
       })

@@ -1,30 +1,14 @@
-using countries_api;
-using countries_api.Settings;
-using Polly;
+using countries_api.Extensions;
 
+var builder = WebApplication.CreateBuilder(args);
+var services = builder.Services;
+var configuration = builder.Configuration;
 // CORS policy
 var allowSpecificOrigins = "_myAllowSpecificOrigins";
 
-var builder = WebApplication.CreateBuilder(args);
-
 // Add services to the container.
-
-builder.Services.Configure<RestCountriesOptions>(
-    builder.Configuration.GetSection(RestCountriesOptions.RestCountries));
-
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy(name: allowSpecificOrigins,
-                      policy  =>
-                      {
-                          policy.WithOrigins("http://localhost:3000").AllowAnyHeader().AllowAnyMethod();
-                      });
-});
-
-builder.Services.AddHttpClient<RestCountriesService>()
-    .AddTransientHttpErrorPolicy(policyBuilder =>
-        policyBuilder.WaitAndRetryAsync(
-            3, retryNumber => TimeSpan.FromMilliseconds(600))); ;
+services.AddConfiguredCors(configuration, allowSpecificOrigins);
+services.AddRestCountriesClient(configuration);
 builder.Services.AddControllers().AddNewtonsoftJson();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
