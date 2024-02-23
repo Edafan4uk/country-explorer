@@ -5,7 +5,7 @@ services:
     container_name:  countries-api
     restart: always
     ports:
-      - 8080:8080
+      - 5027:8080
 
   countries-ui:
     build:

@@ -22,7 +22,7 @@ function CountryOverview() {
   return (
     <Container>
       <div className="countries-button">
-        <ButtonLink to="/" variant="danger">
+        <ButtonLink to="/" variant="link" className="mr-1">
           Go to Countries Page
         </ButtonLink>
       </div>
