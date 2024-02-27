@@ -3,7 +3,7 @@ using Polly;
 
 namespace countries_api.Extensions;
 
-public static class ServiceCollectionExtensions
+public static class DependencyInjection
 {
     public static IServiceCollection AddConfiguredCors(this IServiceCollection services, IConfiguration configuration, string policy)
     {
